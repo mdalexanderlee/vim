@@ -89,7 +89,7 @@ let g:mucomplete#enable_auto_at_startup = 1
 
 "UltiSnips settings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<F1>"
+let g:UltiSnipsExpandTrigger="<F4>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
