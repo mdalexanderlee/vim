@@ -117,7 +117,7 @@ let g:NERDToggleCheckAllLines = 1
 map <S-UP> {
 map <S-DOWN> }
 map <S-RIGHT> w
-map <S-LEFT> e
+map <S-LEFT> b
 map <C-z> zz
 
 set tags=./tags,tags;$HOME
