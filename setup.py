@@ -2,6 +2,7 @@ from os.path import expanduser, isfile
 from os import getcwd, rename
 from shutil import copyfile
 import sys
+from subprocess import call
 
 def copy():
     print( "Creating a backup vimrc at " + backup )
@@ -21,4 +22,7 @@ if isfile( path ):
         print( "Okay, quitting now!", flush=True )
         quit()
 copy()
+install = input( "Install dependencies? (Y/N)" ).lower()
+if install == "y":
+    call( ["./install_debian.sh"] )
 
