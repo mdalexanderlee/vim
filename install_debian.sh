@@ -6,6 +6,10 @@ echo "Installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 2>/dev/null
 echo "Done."
 
+echo "Installing Plugins..."
+vim +PluginInstall +qall
+echo "Done."
+
 echo "Installing Mucomplete..."
 mkdir -p ~/.vim/pack/bundle/start 2>/dev/null
 cd ~/.vim/pack/bundle/start && \
