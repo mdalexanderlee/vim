@@ -1,4 +1,3 @@
-from subprocess import call
 from os.path import expanduser, isfile
 from os import getcwd, rename
 from shutil import copyfile
