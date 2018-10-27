@@ -1,5 +1,6 @@
 # Requirements
-Python Version >= 3
+* Vim 8
+* Python Version >= 3
 
 # Setup.py
 Run to install vimrc onto your system.

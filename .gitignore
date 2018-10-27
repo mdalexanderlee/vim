@@ -1,2 +1,6 @@
 *.netrwhist
 *.bak
+autoload/
+bundle/
+pack/
+colors/

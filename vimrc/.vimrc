@@ -22,6 +22,7 @@ Plugin 'yggdroot/indentline'
 Plugin 'raimondi/delimitmate'
 Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
+Plugin 'bling/vim-airline'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -48,6 +49,7 @@ filetype plugin indent on    " required
 
 syntax enable
 
+" Change the map leader
 let mapleader = ","
 
 " Color Scheme Settings
