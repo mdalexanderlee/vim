@@ -80,13 +80,16 @@ let g:ale_c_parse_makefile = 1
 "let g:ale_completion_enabled = 1
 let g:ale_echo_msg_format = '%linter% says %s'
 
+" Turn omnifunc on
+set omnifunc=syntaxcomplete#Complete
+
 " mucomplete settings
 " Refer to note at top to install mucomplete
 set completeopt+=menuone
 set completeopt+=noselect
 set shortmess+=c   " Shut off completion messages
 set belloff+=ctrlg " If Vim beeps during completion
-let g:mucomplete#chains = { 'default': [ 'ulti', 'omni'] }
+let g:mucomplete#chains = { 'default': [ 'ulti', 'omni', 'incl'] }
 let g:mucomplete#enable_auto_at_startup = 1
 
 "UltiSnips settings
