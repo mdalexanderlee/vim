@@ -32,6 +32,8 @@ Plugin 'honza/vim-snippets'
 
 Plugin 'scrooloose/nerdcommenter'
 
+Plugin 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,9 +77,9 @@ set expandtab
 " Ale Settings
 " To enable autocomplete, have to make sure that clangd is installed and set
 " the appropriate variable
-let g:ale_linters = {'cpp': ['clang','clangd']}
+let g:ale_linters = {'cpp': ['clang']}
 let g:ale_c_parse_makefile = 1
-"let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 let g:ale_echo_msg_format = '%linter% says %s'
 
 " Turn omnifunc on
@@ -87,9 +89,10 @@ set omnifunc=syntaxcomplete#Complete
 " Refer to note at top to install mucomplete
 set completeopt+=menuone
 set completeopt+=noselect
+set completeopt-=preview
 set shortmess+=c   " Shut off completion messages
 set belloff+=ctrlg " If Vim beeps during completion
-let g:mucomplete#chains = { 'default': [ 'ulti', 'omni', 'incl'] }
+let g:mucomplete#chains = { 'default': [ 'ulti' , 'omni', 'keyn', 'file' ] }
 let g:mucomplete#enable_auto_at_startup = 1
 
 "UltiSnips settings
