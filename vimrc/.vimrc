@@ -50,6 +50,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax enable
+autocmd BufNewFile,BufRead *.v,*.sv set syntax=verilog
 
 " Change the map leader
 let mapleader = ","
@@ -87,11 +88,11 @@ set omnifunc=syntaxcomplete#Complete
 
 " mucomplete settings
 " Refer to note at top to install mucomplete
-set completeopt+=menuone
-set completeopt+=noselect
-set completeopt-=preview
-set shortmess+=c   " Shut off completion messages
-set belloff+=ctrlg " If Vim beeps during completion
+" set completeopt+=menuone
+" set completeopt+=noselect
+" set completeopt-=preview
+" set shortmess+=c   " Shut off completion messages
+" set belloff+=ctrlg " If Vim beeps during completion
 let g:mucomplete#chains = { 'default': [ 'ulti' , 'omni', 'keyn', 'file' ] }
 let g:mucomplete#enable_auto_at_startup = 1
 
