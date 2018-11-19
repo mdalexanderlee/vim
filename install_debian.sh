@@ -2,10 +2,6 @@
 
 echo "Installing dependencies for Debian-based systems..."
 
-echo "Installing ctags..."
-sudo apt-get install exuberant-ctags 2>/dev/null
-echo "Done with installation! Remove ~/.vim to uninstall."
-
 echo "Installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 2>/dev/null
 echo "Done."

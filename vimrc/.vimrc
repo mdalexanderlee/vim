@@ -15,8 +15,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'yggdroot/indentline'
 Plugin 'raimondi/delimitmate'
@@ -77,7 +75,7 @@ set expandtab
 " Ale Settings
 " To enable autocomplete, have to make sure that clangd is installed and set
 " the appropriate variable
-let g:ale_linters = {'cpp': ['clang']}
+let g:ale_linters = {'cpp': ['clangd']}
 let g:ale_c_parse_makefile = 1
 " let g:ale_completion_enabled = 1
 let g:ale_echo_msg_format = '%linter% says %s'
@@ -127,5 +125,3 @@ map <S-DOWN> }
 map <S-RIGHT> w
 map <S-LEFT> b
 map <C-z> zz
-
-set tags=./tags,tags;$HOME
