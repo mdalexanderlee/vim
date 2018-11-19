@@ -4,9 +4,10 @@ from shutil import copyfile
 import sys
 from subprocess import call
 
-def copy():
+def createBackup():
     print( "Creating a backup vimrc at " + backup )
     rename( path, backup )
+def copy():
     print( "Copying from " + vimrc + " to " + path )
     copyfile( vimrc, path )
 
@@ -21,8 +22,9 @@ if isfile( path ):
     if answer == "n" or answer == "no":
         print( "Okay, quitting now!", flush=True )
         quit()
+    else:
+        createBackup()
 copy()
 install = input( "Install dependencies? (Y/N)" ).lower()
 if install == "y":
-    call( ["./install_debian.sh"] )
-
+    call( ["./install.sh"] )

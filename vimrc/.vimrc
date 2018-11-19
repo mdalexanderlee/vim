@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'yggdroot/indentline'
 Plugin 'raimondi/delimitmate'
 Plugin 'w0rp/ale'
+Plugin 'valloric/youcompleteme'
 Plugin 'morhetz/gruvbox'
 Plugin 'bling/vim-airline'
 
@@ -75,23 +76,9 @@ set expandtab
 " Ale Settings
 " To enable autocomplete, have to make sure that clangd is installed and set
 " the appropriate variable
-let g:ale_linters = {'cpp': ['clangd']}
-let g:ale_c_parse_makefile = 1
-" let g:ale_completion_enabled = 1
+let g:ale_linters = {'cpp': ['clang']}
+let g:ale_c_parse_compile_commands = 1
 let g:ale_echo_msg_format = '%linter% says %s'
-
-" Turn omnifunc on
-set omnifunc=syntaxcomplete#Complete
-
-" mucomplete settings
-" Refer to note at top to install mucomplete
-set completeopt+=menuone
-set completeopt+=noselect
-set completeopt-=preview
-set shortmess+=c   " Shut off completion messages
-set belloff+=ctrlg " If Vim beeps during completion
-let g:mucomplete#chains = { 'default': [ 'ulti' , 'omni', 'keyn', 'file' ] }
-let g:mucomplete#enable_auto_at_startup = 1
 
 "UltiSnips settings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
