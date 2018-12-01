@@ -22,6 +22,7 @@ Plugin 'w0rp/ale'
 Plugin 'valloric/youcompleteme'
 Plugin 'morhetz/gruvbox'
 Plugin 'bling/vim-airline'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -50,6 +51,10 @@ filetype plugin indent on    " required
 
 syntax enable
 
+"Activate syntaxes
+au BufNewFile,BufRead *.cu set ft=cuda
+au BufNewFile,BufRead *.cuh set ft=cuda
+
 " Change the map leader
 let mapleader = ","
 
@@ -76,8 +81,9 @@ set expandtab
 " Ale Settings
 " To enable autocomplete, have to make sure that clangd is installed and set
 " the appropriate variable
-let g:ale_linters = {'cpp': ['clang']}
+let g:ale_linters = {'cpp': ['clang', 'cpplint']}
 let g:ale_c_parse_compile_commands = 1
+let g:ale_cpp_cpplint_executable = 'cpplint.py'
 let g:ale_echo_msg_format = '%linter% says %s'
 
 "UltiSnips settings
@@ -90,7 +96,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " NerdCommenter Settings
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 0
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 " Align line-wise comment delimiters flush left instead of following code indentation
