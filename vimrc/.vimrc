@@ -77,6 +77,7 @@ set tabstop=8
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set backspace=indent,eol,start
 
 " Ale Settings
 " To enable autocomplete, have to make sure that clangd is installed and set
