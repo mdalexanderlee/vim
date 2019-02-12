@@ -15,3 +15,5 @@ mkdir ~/.vim/colors
 cp ~/.vim/bundle/gruvbox/colors/gruvbox.vim ~/.vim/colors/
 echo "Done."
 
+echo "REMEMBER TO COMPILE YCM TO START USING IT!!"
+

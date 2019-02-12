@@ -87,6 +87,9 @@ let g:ale_c_parse_compile_commands = 1
 let g:ale_cpp_cpplint_executable = 'cpplint.py'
 let g:ale_echo_msg_format = '%linter% says %s'
 
+"Below is an example of how you can change flags into uncrustify
+"let g:ale_c_uncrustify_options = '-c ben.cfg.txt'
+
 "UltiSnips settings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<F4>"
@@ -119,3 +122,8 @@ map <S-DOWN> }
 map <S-RIGHT> w
 map <S-LEFT> b
 map <C-z> zz
+
+" Enables reading of project specific vimrc
+" Taken from https://akrabat.com/using-vimrc-for-project-specific-settings/
+set exrc
+set secure
